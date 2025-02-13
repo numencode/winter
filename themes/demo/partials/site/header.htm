@@ -1,8 +1,10 @@
 ==
+<?php
 function onStart()
 {
     $this['backendUrl'] = Backend::url('/');
 }
+?>
 ==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
@@ -14,15 +16,14 @@ function onStart()
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ 'home'|page }}">Winter Demo</a>
+            <a class="navbar-brand" href="{{ 'home'|page }}">WebArea</a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Basic concepts</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
-                <li><a href="{{ backendUrl }}">Sign in to the Backend</a></li>
+                <li><a href="https://numencode.com" target="_blank">NumenCode Dev Blog</a></li>
+                <li><a href="https://github.com/numencode/" target="_blank">NumenCode GitHub</a></li>
+                <li><a href="{{ backendUrl }}">Backend</a></li>
             </ul>
         </div>
     </div>

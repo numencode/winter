@@ -4,6 +4,8 @@
 # Except the .gitignore file
 !.gitignore
 
-# Except the "custom" folder and its contents
+# Except the "custom" and "winter" folders and its contents
 !custom/
 !custom/**
+!winter/
+!winter/**
