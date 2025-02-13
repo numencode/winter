@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except the .gitignore file
+!.gitignore
+
+# Except the "custom" folder and its contents
+!custom/
+!custom/**
