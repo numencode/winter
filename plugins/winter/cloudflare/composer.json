@@ -1,0 +1,28 @@
+{
+    "name": "winter/wn-cloudflare-plugin",
+    "description": "Ensures expected behavior when Cloudflare is used with Winter CMS.",
+    "type": "winter-plugin",
+    "homepage": "https://github.com/wintercms/wn-cloudflare-plugin",
+    "support": {
+        "issues": "https://github.com/wintercms/wn-cloudflare-plugin/issues",
+        "discord": "https://discord.gg/D5MFSPH6Ux",
+        "source": "https://github.com/wintercms/wn-cloudflare-plugin"
+    },
+    "keywords": ["rocketloader", "cloudflare", "proxy", "wintercms", "https", "flexiblessl"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Heath Dutton",
+            "email": "heathdutton@gmail.com",
+            "role": "Original Author"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
+        }
+    ],
+    "replace": {
+        "heathdutton/cloudflare": "<= 1.0.3"
+    }
+}
