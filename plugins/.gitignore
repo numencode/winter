@@ -4,10 +4,6 @@
 # Except the .gitignore file
 !.gitignore
 
-# Except the "custom" and "winter" folders and its contents
+# Except the "custom" plugin
 !custom/
 !custom/**
-
-# Except the SyncOps plugin which is WIP
-!numencode/syncops/
-!numencode/syncops/**
