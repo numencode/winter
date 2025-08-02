@@ -16,6 +16,12 @@
     "support": {
         "source": "https://github.com/numencode/winter"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:numencode/wn-syncops-plugin.git"
+        }
+    ],
     "require": {
         "php": ">=8.1",
         "winter/storm": "~1.2.0",
@@ -31,6 +37,7 @@
 
         "numencode/wn-fundamentals-plugin": "^1.0",
         "numencode/wn-widgets-plugin": "^1.0",
+        "numencode/wn-syncops-plugin": "*",
         "numencode/wn-dropboxadapter-plugin": "*"
     },
     "require-dev": {
