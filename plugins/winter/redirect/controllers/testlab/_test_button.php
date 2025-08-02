@@ -1,7 +1,0 @@
-<button class="btn btn-primary btn-block wn-icon-play"
-        id="testButton"
-        type="button"
-        data-control-popup="onPopup"
-        onclick="testerStart($(this));">
-    <?= e(trans('winter.redirect::lang.test_lab.start_tests')); ?> (<?= $redirectCount ?>)
-</button>

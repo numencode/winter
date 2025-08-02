@@ -1,8 +1,0 @@
-# ===================================
-#  List Column Definitions
-# ===================================
-
-columns:
-    name:
-        label: winter.redirect::lang.redirect.name
-        searchable: true

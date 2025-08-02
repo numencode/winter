@@ -7,8 +7,6 @@
 # Except the "custom" and "winter" folders and its contents
 !custom/
 !custom/**
-!winter/
-!winter/**
 
 # Except the SyncOps plugin which is WIP
 !numencode/syncops/
