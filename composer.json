@@ -18,6 +18,11 @@
     },
     "repositories": [
         {
+            "type": "path",
+            "url": "plugins/numencode/syncops",
+            "canonical": false
+        },
+        {
             "type": "git",
             "url": "git@github.com:numencode/wn-syncops-plugin.git"
         }

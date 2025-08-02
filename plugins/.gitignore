@@ -9,3 +9,7 @@
 !custom/**
 !winter/
 !winter/**
+
+# Except the SyncOps plugin which is WIP
+!numencode/syncops/
+!numencode/syncops/**
