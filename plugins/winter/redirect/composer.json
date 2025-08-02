@@ -1,0 +1,49 @@
+{
+    "name": "winter/wn-redirect-plugin",
+    "description": "Advanced redirect plugin for Winter CMS.",
+    "license": "GPL-2.0-only",
+    "type": "winter-plugin",
+    "authors": [
+        {
+            "name": "Van der Let & Partners",
+            "email": "octobercms@vdlp.nl"
+        },
+        {
+            "name": "Alwin Drenth",
+            "email": "adrenth@gmail.com"
+        },
+        {
+            "name": "Winter CMS Maintainers",
+            "homepage": "https://wintercms.com",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "composer/installers": "^1.0 || ^2.0",
+        "davaxi/sparkline": "^2.0",
+        "jaybizzle/crawler-detect": "^1.2",
+        "league/csv": "^9.0",
+        "symfony/stopwatch": "^4.0 || ^5.0 || ^6.0",
+        "winter/wn-backend-module": "~1.2.8"
+    },
+    "replace": {
+        "vdlp/oc-redirect-plugin": "<=3.1.1"
+    },
+    "archive": {
+        "exclude": [
+            ".gitattributes",
+            ".github",
+            ".gitignore",
+            "tests",
+            "phpunit.xml"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": false
+        }
+    }
+}
