@@ -28,23 +28,30 @@ return [
 
     'connections' => [
         'production' => [
+            // Set SSH credentials
             'host'      => env('SYNCOPS_PRODUCTION_HOST', ''),
             'port'      => env('SYNCOPS_PRODUCTION_PORT', 22),
             'username'  => env('SYNCOPS_PRODUCTION_USERNAME', ''),
             'key_path'  => env('SYNCOPS_PRODUCTION_KEY', ''), // private key file path
 //            'password'  => env('SYNCOPS_PRODUCTION_PASSWORD', ''),
 //            'key_pass'  => env('SYNCOPS_PRODUCTION_KEYPHRASE', ''), // optional
-//            'agent'     => env('SYNCOPS_PRODUCTION_AGENT', false), // optional
 
 //            'key'       => env('SYNCOPS_PRODUCTION_KEY', ''),
 //            'keytext'   => env('SYNCOPS_PRODUCTION_KEYTEXT', ''),
 //            'keyphrase' => env('SYNCOPS_PRODUCTION_KEYPHRASE', ''),
-//            'agent'     => env('SYNCOPS_PRODUCTION_AGENT', ''),
             'timeout'   => 600,
 
+            // Set project path and working branch names
             'path'        => rtrim(env('SYNCOPS_PRODUCTION_PATH'), '/'),
             'branch_prod' => env('SYNCOPS_PRODUCTION_BRANCH_PROD', 'prod'),
             'branch_main' => env('SYNCOPS_PRODUCTION_BRANCH_MAIN', 'main'),
+
+            // Permissions are required if there are multiple users with different access rights on the server
+            'permissions' => [
+                'root_user'   => env('REMOTE_PRODUCTION_ROOT_USER'),
+                'web_user'    => env('REMOTE_PRODUCTION_WEB_USER'),
+                'web_folders' => 'storage,themes',
+            ],
 
             // Extra data is required for the NumenCode\SyncOps plugin
             'backup'    => [
@@ -52,12 +59,7 @@ return [
 //                'branch'      => env('REMOTE_PRODUCTION_BRANCH', 'prod'),
 //                'branch_main' => env('REMOTE_PRODUCTION_BRANCH_MAIN', 'main'),
 
-                // Permissions are required if there are multiple users with different access rights on the server
-                'permissions' => [
-                    'root_user'   => env('REMOTE_PRODUCTION_ROOT_USER'),
-                    'web_user'    => env('REMOTE_PRODUCTION_WEB_USER'),
-                    'web_folders' => 'storage,themes',
-                ],
+
 
                 // Remote database credentials are only required for the db:pull command
                 'database'    => [
