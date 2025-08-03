@@ -3316,7 +3316,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:numencode/wn-syncops-plugin.git",
-                "reference": "788bd0a08db85376c6915145b859a537812b949c"
+                "reference": "4acee5f555dd6dd251bf471fef52954ebd858215"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -3359,7 +3359,7 @@
                 "issues": "https://github.com/numencode/wn-syncops-plugin/issues",
                 "source": "https://github.com/numencode/wn-syncops-plugin"
             },
-            "time": "2025-08-03T20:06:09+00:00"
+            "time": "2025-08-03T20:15:30+00:00"
         },
         {
             "name": "numencode/wn-widgets-plugin",
@@ -10563,12 +10563,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
