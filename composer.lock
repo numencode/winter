@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7834284b11a2241e818db100bc2655ea",
+    "content-hash": "829b2e4f71f4b53bf995eb1dc38b8ecd",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3316,7 +3316,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:numencode/wn-syncops-plugin.git",
-                "reference": "1ac55a9aa72ffbd3976b5ef7412deaf2d868166f"
+                "reference": "788bd0a08db85376c6915145b859a537812b949c"
             },
             "require": {
                 "composer/installers": "~1.0",
@@ -3359,7 +3359,7 @@
                 "issues": "https://github.com/numencode/wn-syncops-plugin/issues",
                 "source": "https://github.com/numencode/wn-syncops-plugin"
             },
-            "time": "2025-08-02T12:26:16+00:00"
+            "time": "2025-08-03T20:06:09+00:00"
         },
         {
             "name": "numencode/wn-widgets-plugin",
@@ -10563,12 +10563,12 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.1"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
