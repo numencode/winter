@@ -4,42 +4,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default Remote Connection Name
+    | SyncOps Remote Server Connections
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the default connection that will be used for SSH
-    | operations. This name should correspond to a connection name below
-    | in the server list. Each connection will be manually accessible.
-    |
-    */
-
-    'default' => 'production',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Remote Server Connections
-    |--------------------------------------------------------------------------
-    |
-    | These are the servers that will be accessible via the SSH task runner
-    | facilities of Laravel. This feature radically simplifies executing
-    | tasks on your servers, such as deploying out these applications.
+    | This configuration defines the remote servers that the SyncOps plugin
+    | can connect to. These connections are used by SyncOps plugin to
+    | execute commands and synchronize data, streamlining your
+    | deployment and DevOps workflows for Winter CMS.
     |
     */
 
     'connections' => [
         'production' => [
             // Set SSH credentials
-            'host'      => env('SYNCOPS_PRODUCTION_HOST', ''),
+            'host'      => env('SYNCOPS_PRODUCTION_HOST', ''), // host IP address
             'port'      => env('SYNCOPS_PRODUCTION_PORT', 22),
-            'username'  => env('SYNCOPS_PRODUCTION_USERNAME', ''),
+            'user'      => env('SYNCOPS_PRODUCTION_USER', ''), // SSH user
             'key_path'  => env('SYNCOPS_PRODUCTION_KEY', ''), // private key file path
-//            'password'  => env('SYNCOPS_PRODUCTION_PASSWORD', ''),
-//            'key_pass'  => env('SYNCOPS_PRODUCTION_KEYPHRASE', ''), // optional
-
-//            'key'       => env('SYNCOPS_PRODUCTION_KEY', ''),
-//            'keytext'   => env('SYNCOPS_PRODUCTION_KEYTEXT', ''),
-//            'keyphrase' => env('SYNCOPS_PRODUCTION_KEYPHRASE', ''),
-            'timeout'   => 600,
 
             // Set project path and working branch names
             'path'        => rtrim(env('SYNCOPS_PRODUCTION_PATH'), '/'),
