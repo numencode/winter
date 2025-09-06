@@ -20,6 +20,7 @@ return [
             'host'      => env('SYNCOPS_PRODUCTION_HOST', ''), // host IP address
             'port'      => env('SYNCOPS_PRODUCTION_PORT', 22),
             'user'      => env('SYNCOPS_PRODUCTION_USER', ''), // SSH user
+//            'pass'      => env('SYNCOPS_PRODUCTION_PASS', ''), // SSH pass
             'key_path'  => env('SYNCOPS_PRODUCTION_KEY', ''), // private key file path
 
             // Set project path and working branch names
