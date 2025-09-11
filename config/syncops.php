@@ -78,9 +78,9 @@ return [
             |
             */
             'database'    => [
-                'name'     => env('REMOTE_DB_DATABASE'),
-                'username' => env('REMOTE_DB_USERNAME'),
-                'password' => env('REMOTE_DB_PASSWORD'),
+                'name'     => env('SYNCOPS_PRODUCTION_DB_NAME'),
+                'username' => env('SYNCOPS_PRODUCTION_DB_USERNAME'),
+                'password' => env('SYNCOPS_PRODUCTION_DB_PASSWORD'),
 
                 // Only tables specified in this array will be viable for the db:pull command.
                 // If no tables are specified, all tables are taken into account.
