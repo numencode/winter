@@ -78,7 +78,7 @@ return [
             |
             */
             'database'    => [
-                'name'     => env('SYNCOPS_PRODUCTION_DB_NAME'),
+                'database' => env('SYNCOPS_PRODUCTION_DB_DATABASE'),
                 'username' => env('SYNCOPS_PRODUCTION_DB_USERNAME'),
                 'password' => env('SYNCOPS_PRODUCTION_DB_PASSWORD'),
 
