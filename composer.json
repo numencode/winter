@@ -41,9 +41,9 @@
         "winter/wn-redirect-plugin": "^4.0",
 
         "numencode/wn-fundamentals-plugin": "^1.0",
+        "numencode/wn-dropboxadapter-plugin": "^1.0",
         "numencode/wn-widgets-plugin": "^1.0",
-        "numencode/wn-syncops-plugin": "*",
-        "numencode/wn-dropboxadapter-plugin": "*"
+        "numencode/wn-syncops-plugin": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
