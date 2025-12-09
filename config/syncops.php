@@ -38,11 +38,13 @@ return [
             | environment file for security.
             |
             */
-            'host'     => env('SYNCOPS_PRODUCTION_HOST', ''),     // Remote server host (IP or domain)
-            'port'     => env('SYNCOPS_PRODUCTION_PORT', 22),     // SSH port
-            'username' => env('SYNCOPS_PRODUCTION_USERNAME', ''), // SSH username
-            'password' => env('SYNCOPS_PRODUCTION_PASSWORD', ''), // Optional, not needed with private key
-            'key_path' => env('SYNCOPS_PRODUCTION_KEY', ''),      // Optional, path to private key file
+            'ssh' => [
+                'host'     => env('SYNCOPS_PRODUCTION_HOST', ''),     // Remote server host (IP or domain)
+                'port'     => env('SYNCOPS_PRODUCTION_PORT', 22),     // SSH port
+                'username' => env('SYNCOPS_PRODUCTION_USERNAME', ''), // SSH username
+                'password' => env('SYNCOPS_PRODUCTION_PASSWORD', ''), // Optional, not needed with private key
+                'key_path' => env('SYNCOPS_PRODUCTION_KEY', ''),      // Optional, path to private key file
+            ],
 
             /*
             |--------------------------------------------------------------------------
@@ -53,9 +55,11 @@ return [
             | used for deployment (production branch) and main development tracking.
             |
             */
-            'path'        => rtrim(env('SYNCOPS_PRODUCTION_PATH'), '/'),    // Project root path
-            'branch_prod' => env('SYNCOPS_PRODUCTION_BRANCH_PROD', 'prod'), // Production branch name
-            'branch_main' => env('SYNCOPS_PRODUCTION_BRANCH_MAIN', 'main'), // Development branch name
+            'project' => [
+                'path'        => rtrim(env('SYNCOPS_PRODUCTION_PATH', ''), '/'), // Project root path
+                'branch_prod' => env('SYNCOPS_PRODUCTION_BRANCH_PROD', 'prod'),  // Production branch name
+                'branch_main' => env('SYNCOPS_PRODUCTION_BRANCH_MAIN', 'main'),  // Development branch name
+            ],
 
             /*
             |--------------------------------------------------------------------------
@@ -68,9 +72,9 @@ return [
             |
             */
             'permissions' => [
-                'root_user'   => env('REMOTE_PRODUCTION_ROOT_USER'), // Root user and group, e.g. `root:root`
-                'web_user'    => env('REMOTE_PRODUCTION_WEB_USER'),  // Web user and group, e.g. `www-data:www-data`
-                'web_folders' => ['storage', 'themes'],              // Folders owned by web user
+                'root_user'   => env('SYNCOPS_PRODUCTION_ROOT_USER'), // Root user and group, e.g. `root:root`
+                'web_user'    => env('SYNCOPS_PRODUCTION_WEB_USER'),  // Web user and group, e.g. `www-data:www-data`
+                'web_folders' => ['storage', 'themes'],               // Folders owned by web user
             ],
 
             /*
