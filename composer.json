@@ -30,7 +30,7 @@
         "winter/wn-redirect-plugin": "^4.0",
 
         "numencode/wn-fundamentals-plugin": "^1.0",
-        "numencode/wn-dropboxadapter-plugin": "^1.0",
+        "numencode/wn-dropboxadapter-plugin": "^2.0",
         "numencode/wn-widgets-plugin": "^1.0",
         "numencode/wn-syncops-plugin": "^1.0"
     },

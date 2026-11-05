@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "331daccb5f4a0f37562faba485d80fd3",
+    "content-hash": "05b6605759c6530f08c7890299b84c1e",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3213,28 +3213,29 @@
         },
         {
             "name": "numencode/wn-dropboxadapter-plugin",
-            "version": "v1.1.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-dropboxadapter-plugin.git",
-                "reference": "c21d88f09864c89132328a4d83d78f2d60e1bc9a"
+                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/c21d88f09864c89132328a4d83d78f2d60e1bc9a",
-                "reference": "c21d88f09864c89132328a4d83d78f2d60e1bc9a",
+                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/34c389bc7bc8e80df3371db434b4723166cdbc80",
+                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0",
-                "php": "^8.0.2",
-                "spatie/flysystem-dropbox": "^3.0",
+                "composer/installers": "^1.0 || ^2.0",
+                "guzzlehttp/guzzle": "^7.2",
+                "php": "^8.2",
+                "spatie/dropbox-api": "^1.25",
+                "spatie/flysystem-dropbox": "^3.1",
                 "winter/storm": "^1.2"
             },
             "type": "winter-plugin",
             "extra": {
-                "installer-name": "dropboxadapter",
-                "installer-type": "winter-plugin"
+                "installer-name": "dropboxadapter"
             },
             "autoload": {
                 "psr-4": {
@@ -3250,15 +3251,18 @@
                     "name": "Blaz Orazem",
                     "email": "blaz@orazem.si",
                     "homepage": "https://orazem.si/",
-                    "role": "Founder"
+                    "role": "Maintainer"
                 }
             ],
-            "description": "NumenCode Dropbox Adapter plugin for Winter CMS",
+            "description": "Dropbox (API v2) filesystem disk for Winter CMS with OAuth2 refresh tokens and PKCE support.",
             "homepage": "https://www.numencode.com",
             "keywords": [
+                "Flysystem",
+                "backup",
                 "dropbox",
                 "laravel",
                 "numencode",
+                "oauth2",
                 "plugin",
                 "storage",
                 "winter",
@@ -3268,7 +3272,7 @@
                 "issues": "https://github.com/numencode/wn-dropboxadapter-plugin/issues",
                 "source": "https://github.com/numencode/wn-dropboxadapter-plugin"
             },
-            "time": "2025-07-14T13:52:52+00:00"
+            "time": "2026-11-05T21:05:01+00:00"
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
