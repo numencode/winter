@@ -1854,7 +1854,7 @@ $('select.custom-select').each(function(){var $element=$(this),extraOptions={dro
 if($element.data('select2')!=null){return true;}$element.attr('data-disposable','data-disposable')
 $element.one('dispose-control',function(){if($element.data('select2')){$element.select2('destroy')}})
 if($element.hasClass('select-no-search')){extraOptions.minimumResultsForSearch=Infinity}if($element.hasClass('select-modifiable')){extraOptions.tags=true;extraOptions.createTag=function(params){var term=$.trim(params.term);if(term===''){return null;}return{id:term,text:term,newTag:true};}
-extraOptions.templateResult=function(state){if(!state.id){return state.text;}var icon=state.newTag?'<i class="icon-plus"></i> ':'';return $('<span>'+icon+state.text+'</span>');}}if($element.hasClass('select-no-dropdown')){extraOptions.dropdownCssClass+=' select-no-dropdown'
+extraOptions.templateResult=function(state){if(!state.id){return state.text;}if(state.newTag){return $('<span><i class="icon-plus"></i> '+$('<span>').text(state.text).html()+'</span>');}return formatSelectOption(state);}}if($element.hasClass('select-no-dropdown')){extraOptions.dropdownCssClass+=' select-no-dropdown'
 extraOptions.containerCssClass+=' select-no-dropdown'}if($element.hasClass('select-hide-selected')){extraOptions.dropdownCssClass+=' select-hide-selected'}var source=$element.data('handler');if(source){extraOptions.ajax={transport:function(params,success,failure){var $request=$element.request(source,{data:params.data})
 $request.done(success)
 $request.fail(failure)
@@ -2363,6 +2363,7 @@ this.$el.off('keyup input paste','input:not(.ace_search_field), textarea:not(.ac
 this.$el.off('dispose-control',this.proxy(this.dispose))
 if(this.options.windowCloseConfirm)$(window).off('beforeunload',this.proxy(this.onBeforeUnload))}
 ChangeMonitor.prototype.change=function(ev,inputChange){if(this.paused)return
+if($(ev.target).parents(".control-filter").length)return
 if(ev.target.className==='ace_search_field')return
 if(!inputChange){var type=$(ev.target).attr('type')
 if(type==='text'||type==='password')return}if(!this.$el.hasClass('oc-data-changed')){this.$el.trigger('changed.oc.changeMonitor')
@@ -2552,12 +2553,13 @@ if(!el)return
 if(el.isContentEditable||(el.tagName.toLowerCase()=='input'&&el.type=='text'||el.tagName.toLowerCase()=='textarea')){this.lastElement=el}}
 DragValue.prototype.handleClick=function(event){if(!this.lastElement)return
 var $el=$(this.lastElement)
-if($el.hasClass('ace_text-input'))return this.handleClickCodeEditor(event,$el)
+if($el.closest('[data-control=codeeditor]').length)return this.handleClickCodeEditor(event,$el)
 if(this.lastElement.isContentEditable)return this.handleClickContentEditable()
 this.insertAtCaret(this.lastElement,this.textValue)}
 DragValue.prototype.handleClickCodeEditor=function(event,$el){var $editorArea=$el.closest('[data-control=codeeditor]')
 if(!$editorArea.length)return
-$editorArea.codeEditor('getEditorObject').insert(this.textValue)}
+var wrapper=$editorArea.data('oc.codeEditor')
+if(wrapper&&wrapper.insert){wrapper.insert(this.textValue)}}
 DragValue.prototype.handleClickContentEditable=function(){var sel,range,html;if(window.getSelection){sel=window.getSelection();if(sel.getRangeAt&&sel.rangeCount){range=sel.getRangeAt(0);range.deleteContents();range.insertNode(document.createTextNode(this.textValue));}}else if(document.selection&&document.selection.createRange){document.selection.createRange().text=this.textValue;}}
 DragValue.prototype.insertAtCaret=function(el,insertValue){if(document.selection){el.focus()
 var sel=document.selection.createRange()

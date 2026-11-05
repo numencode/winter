@@ -18,10 +18,10 @@
     },
     "require": {
         "php": ">=8.1",
-        "winter/storm": "~1.2.0",
-        "winter/wn-system-module": "~1.2.0",
-        "winter/wn-backend-module": "~1.2.0",
-        "winter/wn-cms-module": "~1.2.0",
+        "winter/storm": "~1.2.15",
+        "winter/wn-system-module": "~1.2.15",
+        "winter/wn-backend-module": "~1.2.15",
+        "winter/wn-cms-module": "~1.2.15",
         "laravel/framework": "^9.1",
         "wikimedia/composer-merge-plugin": "~2.1.0",
         "winter/wn-cloudflare-plugin": "^2.0",
@@ -77,6 +77,16 @@
         }
     },
     "config": {
+        "policy": {
+            "advisories": {
+                "ignore": {
+                    "laravel/framework": {
+                        "on-audit": false,
+                        "reason": "Winter CMS 1.2 requires Laravel 9"
+                    }
+                }
+            }
+        },
         "allow-plugins": {
             "composer/installers": true,
             "wikimedia/composer-merge-plugin": true
