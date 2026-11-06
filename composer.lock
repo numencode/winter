@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05b6605759c6530f08c7890299b84c1e",
+    "content-hash": "135cfb64c4e65bba35d5c2d50f8cf2ce",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3276,28 +3276,35 @@
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v1.1.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "6245f9134425e95a23badff6968a6cf67b2951ef"
+                "reference": "0be75c66e4587d93e4e26a0ebed5a6b451fdac55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/6245f9134425e95a23badff6968a6cf67b2951ef",
-                "reference": "6245f9134425e95a23badff6968a6cf67b2951ef",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/0be75c66e4587d93e4e26a0ebed5a6b451fdac55",
+                "reference": "0be75c66e4587d93e4e26a0ebed5a6b451fdac55",
                 "shasum": ""
             },
             "require": {
+                "composer/installers": "^1.0 || ^2.0",
                 "mobiledetect/mobiledetectlib": "^4.8",
-                "php": "^8.0.2"
+                "php": "^8.2",
+                "winter/storm": "^1.2"
             },
-            "require-dev": {
-                "symfony/var-dumper": "^5.4"
+            "suggest": {
+                "winter/wn-translate-plugin": "Enables translations of fields inside relation repeaters and the language selector in backend forms."
             },
             "type": "winter-plugin",
             "extra": {
                 "installer-name": "fundamentals"
+            },
+            "autoload": {
+                "psr-4": {
+                    "NumenCode\\Fundamentals\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3308,15 +3315,21 @@
                     "name": "Blaz Orazem",
                     "email": "blaz@orazem.si",
                     "homepage": "https://orazem.si/",
-                    "role": "Founder"
+                    "role": "Maintainer"
                 }
             ],
-            "description": "NumenCode Fundamentals plugin for Winter CMS",
+            "description": "Toolbox for Winter CMS projects: inline relation repeaters, publishable models, theme-overridable component layouts, backend improvements, Twig functions and PHP helpers.",
             "homepage": "https://www.numencode.com",
             "keywords": [
+                "Repeater",
+                "Toolbox",
+                "helpers",
                 "laravel",
                 "numencode",
                 "plugin",
+                "relations",
+                "translate",
+                "twig",
                 "winter",
                 "winter cms"
             ],
@@ -3324,7 +3337,7 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2025-03-20T21:19:14+00:00"
+            "time": "2026-11-06T16:36:52+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
@@ -3384,25 +3397,35 @@
         },
         {
             "name": "numencode/wn-widgets-plugin",
-            "version": "v1.2.0",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-widgets-plugin.git",
-                "reference": "29f9923e06312b024e463483524fc04fb8d89989"
+                "reference": "fc4ba06063ada1e9e1616ddf20ec123966472f9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/29f9923e06312b024e463483524fc04fb8d89989",
-                "reference": "29f9923e06312b024e463483524fc04fb8d89989",
+                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/fc4ba06063ada1e9e1616ddf20ec123966472f9e",
+                "reference": "fc4ba06063ada1e9e1616ddf20ec123966472f9e",
                 "shasum": ""
             },
             "require": {
-                "numencode/wn-fundamentals-plugin": "^1.1",
-                "php": "^8.0.2"
+                "composer/installers": "^1.0 || ^2.0",
+                "numencode/wn-fundamentals-plugin": "^2.1",
+                "php": "^8.2"
+            },
+            "suggest": {
+                "winter/wn-pages-plugin": "Enables the widgets as snippets in static pages.",
+                "winter/wn-translate-plugin": "Enables translations of widget groups and their items."
             },
             "type": "winter-plugin",
             "extra": {
                 "installer-name": "widgets"
+            },
+            "autoload": {
+                "psr-4": {
+                    "NumenCode\\Widgets\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3413,15 +3436,21 @@
                     "name": "Blaz Orazem",
                     "email": "blaz@orazem.si",
                     "homepage": "https://orazem.si/",
-                    "role": "Founder"
+                    "role": "Maintainer"
                 }
             ],
-            "description": "NumenCode Widgets plugin for Winter CMS",
+            "description": "Reusable content widgets for Winter CMS: promotions, features, highlights, galleries and counters, managed in the backend and rendered by components with theme-overridable layouts.",
             "homepage": "https://www.numencode.com",
             "keywords": [
+                "components",
+                "counters",
+                "gallery",
                 "laravel",
                 "numencode",
                 "plugin",
+                "slider",
+                "translate",
+                "widgets",
                 "winter",
                 "winter cms"
             ],
@@ -3429,7 +3458,7 @@
                 "issues": "https://github.com/numencode/wn-widgets-plugin/issues",
                 "source": "https://github.com/numencode/wn-widgets-plugin"
             },
-            "time": "2025-03-20T21:25:50+00:00"
+            "time": "2026-11-06T18:19:37+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -8380,6 +8409,78 @@
                 }
             ],
             "time": "2026-11-04T15:04:52+00:00"
+        },
+        {
+            "name": "winter/wn-translate-plugin",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-translate-plugin.git",
+                "reference": "c8281bed1e15c7ddc01b79e4f21a954f46b3305b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-translate-plugin/zipball/c8281bed1e15c7ddc01b79e4f21a954f46b3305b",
+                "reference": "c8281bed1e15c7ddc01b79e4f21a954f46b3305b",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "guzzlehttp/guzzle": "^7.15.2 || ^8.0.1",
+                "php": ">=8.1",
+                "winter/wn-backend-module": ">=1.2.8 || dev-develop"
+            },
+            "replace": {
+                "rainlab/translate-plugin": "~1.6"
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "translate"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Bobkov",
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Samuel Georges",
+                    "email": "daftspunky@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Translate plugin for Winter CMS",
+            "homepage": "https://github.com/wintercms/wn-translate-plugin",
+            "keywords": [
+                "translate",
+                "winter",
+                "wintercms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-translate-plugin/issues",
+                "source": "https://github.com/wintercms/wn-translate-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/wintercms",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/wintercms",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-08-21T20:56:32+00:00"
         }
     ],
     "packages-dev": [
