@@ -28,10 +28,11 @@
         "winter/wn-pages-plugin": "^2.1",
         "winter/wn-sitemap-plugin": "^2.1",
         "winter/wn-redirect-plugin": "^4.0",
+        "winter/wn-translate-plugin": "^2.4",
 
-        "numencode/wn-fundamentals-plugin": "^1.0",
+        "numencode/wn-fundamentals-plugin": "^2.1",
         "numencode/wn-dropboxadapter-plugin": "^2.0",
-        "numencode/wn-widgets-plugin": "^1.0",
+        "numencode/wn-widgets-plugin": "^2.0",
         "numencode/wn-syncops-plugin": "^1.0"
     },
     "require-dev": {
