@@ -29,11 +29,13 @@
         "winter/wn-sitemap-plugin": "^2.1",
         "winter/wn-redirect-plugin": "^4.0",
         "winter/wn-translate-plugin": "^2.4",
+        "winter/wn-blog-plugin": "^2.2",
 
         "numencode/wn-fundamentals-plugin": "^2.1",
         "numencode/wn-dropboxadapter-plugin": "^2.0",
         "numencode/wn-widgets-plugin": "^2.0",
-        "numencode/wn-syncops-plugin": "^2.0"
+        "numencode/wn-syncops-plugin": "^2.0",
+        "numencode/wn-blogextension-plugin": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",
