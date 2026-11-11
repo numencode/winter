@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78cd8114dd037c930deac12ed5d63c0c",
+    "content-hash": "64af53de68a942b9ee0544005afda7ab",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3210,6 +3210,72 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.9.0"
             },
             "time": "2026-09-13T18:51:52+00:00"
+        },
+        {
+            "name": "numencode/wn-blogextension-plugin",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/numencode/wn-blogextension-plugin.git",
+                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/a5f966d3218afde97e2d11978ac16c42405b5a51",
+                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "numencode/wn-fundamentals-plugin": "^2.1",
+                "php": "^8.2",
+                "winter/wn-blog-plugin": "^2.2"
+            },
+            "suggest": {
+                "fakerphp/faker": "Enables the Faker page (generates demo categories, posts and pictures while app.debug is on).",
+                "winter/wn-pages-plugin": "Enables blog tags as menu items (and in Winter.Sitemap).",
+                "winter/wn-translate-plugin": "Enables translations of tags, pictures and files."
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "blogextension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "NumenCode\\BlogExtension\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Blaz Orazem",
+                    "email": "blaz@orazem.si",
+                    "homepage": "https://orazem.si/",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Extends Winter.Blog with tags, picture galleries, file attachments, breadcrumbs, reading time, related posts and a configurable RSS feed.",
+            "homepage": "https://www.numencode.com",
+            "keywords": [
+                "blog",
+                "gallery",
+                "laravel",
+                "numencode",
+                "plugin",
+                "rss",
+                "tags",
+                "translate",
+                "winter",
+                "winter cms"
+            ],
+            "support": {
+                "issues": "https://github.com/numencode/wn-blogextension-plugin/issues",
+                "source": "https://github.com/numencode/wn-blogextension-plugin"
+            },
+            "time": "2026-11-11T22:11:52+00:00"
         },
         {
             "name": "numencode/wn-dropboxadapter-plugin",
@@ -7996,6 +8062,78 @@
                 }
             ],
             "time": "2026-11-04T21:43:11+00:00"
+        },
+        {
+            "name": "winter/wn-blog-plugin",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wintercms/wn-blog-plugin.git",
+                "reference": "e3571506579a5e816d6e18332015a24a503c03a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wintercms/wn-blog-plugin/zipball/e3571506579a5e816d6e18332015a24a503c03a4",
+                "reference": "e3571506579a5e816d6e18332015a24a503c03a4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=8.1",
+                "winter/wn-backend-module": "^1.2.8|dev-develop"
+            },
+            "replace": {
+                "rainlab/blog-plugin": "~1.3"
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "blog"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Bobkov",
+                    "email": "aleksey.bobkov@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Samuel Georges",
+                    "email": "daftspunky@gmail.com",
+                    "role": "Original Author"
+                },
+                {
+                    "name": "Winter CMS Maintainers",
+                    "homepage": "https://wintercms.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Blog plugin for Winter CMS",
+            "homepage": "https://github.com/wintercms/wn-blog-plugin",
+            "keywords": [
+                "blog",
+                "plugin",
+                "winter",
+                "winter cms"
+            ],
+            "support": {
+                "discord": "https://discord.gg/D5MFSPH6Ux",
+                "issues": "https://github.com/wintercms/wn-blog-plugin/issues",
+                "source": "https://github.com/wintercms/wn-blog-plugin"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/wintercms",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/wintercms",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-08-26T23:02:07+00:00"
         },
         {
             "name": "winter/wn-cloudflare-plugin",
