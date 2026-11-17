@@ -25,6 +25,15 @@ function onStart()
                 <li><a href="https://github.com/numencode/" target="_blank">NumenCode GitHub</a></li>
                 <li><a href="{{ backendUrl }}">Backend</a></li>
             </ul>
+            {% if locales is defined and locales|length > 1 %}
+                <ul class="nav navbar-nav navbar-right">
+                    {% for code, name in locales %}
+                        <li class="{{ code == activeLocale ? 'active' }}">
+                            <a href="#" title="{{ name }}" data-request="onSwitchLocale" data-request-data="locale: '{{ code }}'">{{ code|upper }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 </nav>
