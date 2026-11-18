@@ -1,7 +1,7 @@
 description = "Bricks test layout (NumenCode.Bricks)"
 
 [staticPage]
-useContent = 1
+useContent = 0
 default = 0
 
 [localePicker]
@@ -37,8 +37,7 @@ code = "main-menu"
             {variable type="bricks" name="bricks" label="Bricks" tab="Content"}{/variable}
 
             <div class="container">
-                {% set bricksHtml = renderBricks() %}
-                {% if bricksHtml|trim %}{{ bricksHtml|raw }}{% else %}{% page %}{% endif %}
+                {{ renderBricks() }}
             </div>
         </section>
 
