@@ -4,17 +4,23 @@ url = "/bricks"
 layout = "bricks"
 is_hidden = 0
 navigation_hidden = 0
-bricks[0][text] = "Hello \"bricks\" & friends"
-bricks[0][level] = "h2"
-bricks[0][_group] = "heading"
-bricks[1][content] = "<p>First paragraph with \"quotes\", it's ok; čšž €.</p>
+bricks[0][content] = "<p>Stage 4 bricks - this is just a content</p>"
+bricks[0][_group] = "text"
+bricks[1][text] = "Hello \"bricks\" & friends"
+bricks[1][level] = "h2"
+bricks[1][_group] = "heading"
+bricks[2][content] = "<p>First paragraph with \"quotes\", it's ok; čšž €.</p>
 
 <p>Second paragraph = [brackets] \ backslash.</p>
 
 <p>This is english text. It works.</p>"
-bricks[1][_group] = "text"
-bricks[2][text] = "Second title"
-bricks[2][level] = "h3"
-bricks[2][_group] = "heading"
+bricks[2][_group] = "text"
+bricks[3][group] = 1
+bricks[3][layout] = "@default"
+bricks[3][_group] = "counters"
+bricks[4][group] = 1
+bricks[4][layout] = "@default_with_media"
+bricks[4][_group] = "features"
 localeUrl[sl] = "/opeke"
 ==
+<p>This is the content under the bricks.</p>

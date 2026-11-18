@@ -33,13 +33,10 @@ forceUrl = 0
         <section id="layout-content">
             {variable type="bricks" name="bricks" label="Bricks" tab="Content"}{/variable}
 
-            {# renderBricks() comes in stage 5; until then show the stored data #}
-            <pre>{{ bricks|json_encode(384) }}</pre>
-
-            {# SPIKE: component added in cms.page.initComponents #}
-            {% if brick0counters is defined %}{% component 'brick0counters' %}{% endif %}
-
-            {% page %}
+            <div class="container">
+                {% set bricksHtml = renderBricks() %}
+                {% if bricksHtml|trim %}{{ bricksHtml|raw }}{% else %}{% page %}{% endif %}
+            </div>
         </section>
 
         <!-- Footer -->
