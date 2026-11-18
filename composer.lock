@@ -3217,12 +3217,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-blogextension-plugin.git",
-                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51"
+                "reference": "e2345dd046e95d9063a1d276bcdec2bebc38d794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/a5f966d3218afde97e2d11978ac16c42405b5a51",
-                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51",
+                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/e2345dd046e95d9063a1d276bcdec2bebc38d794",
+                "reference": "e2345dd046e95d9063a1d276bcdec2bebc38d794",
                 "shasum": ""
             },
             "require": {
