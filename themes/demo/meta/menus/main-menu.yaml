@@ -1,0 +1,34 @@
+name: 'Main menu'
+items:
+    -
+        title: Home
+        type: cms-page
+        reference: home
+        code: home
+        viewBag:
+            locale:
+                sl:
+                    title: Domov
+    -
+        title: Demo
+        type: static-page
+        reference: demo
+        code: demo
+    -
+        title: 'New page'
+        type: static-page
+        reference: new-page
+        code: new-page
+        viewBag:
+            locale:
+                sl:
+                    title: 'Nova stran'
+    -
+        title: Bricks
+        type: static-page
+        reference: bricks
+        code: bricks
+        viewBag:
+            locale:
+                sl:
+                    title: Opeke
