@@ -3412,12 +3412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-syncops-plugin.git",
-                "reference": "f99be66f350787ab9c0e71c9ad0c3b8c7214c437"
+                "reference": "c439a5f033f7c5004593e265a90dcd1339ce1e13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/f99be66f350787ab9c0e71c9ad0c3b8c7214c437",
-                "reference": "f99be66f350787ab9c0e71c9ad0c3b8c7214c437",
+                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/c439a5f033f7c5004593e265a90dcd1339ce1e13",
+                "reference": "c439a5f033f7c5004593e265a90dcd1339ce1e13",
                 "shasum": ""
             },
             "require": {
