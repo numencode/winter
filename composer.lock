@@ -3213,16 +3213,16 @@
         },
         {
             "name": "numencode/wn-blogextension-plugin",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-blogextension-plugin.git",
-                "reference": "e2345dd046e95d9063a1d276bcdec2bebc38d794"
+                "reference": "5d234fae402575f14e746c349c2c8f372ed62e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/e2345dd046e95d9063a1d276bcdec2bebc38d794",
-                "reference": "e2345dd046e95d9063a1d276bcdec2bebc38d794",
+                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/5d234fae402575f14e746c349c2c8f372ed62e47",
+                "reference": "5d234fae402575f14e746c349c2c8f372ed62e47",
                 "shasum": ""
             },
             "require": {
@@ -3275,20 +3275,20 @@
                 "issues": "https://github.com/numencode/wn-blogextension-plugin/issues",
                 "source": "https://github.com/numencode/wn-blogextension-plugin"
             },
-            "time": "2026-11-11T22:11:52+00:00"
+            "time": "2026-11-18T18:31:20+00:00"
         },
         {
             "name": "numencode/wn-dropboxadapter-plugin",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-dropboxadapter-plugin.git",
-                "reference": "73ecab4f1909c0354a7a379dfe19549f2db0ce47"
+                "reference": "5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/73ecab4f1909c0354a7a379dfe19549f2db0ce47",
-                "reference": "73ecab4f1909c0354a7a379dfe19549f2db0ce47",
+                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc",
+                "reference": "5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc",
                 "shasum": ""
             },
             "require": {
@@ -3338,20 +3338,20 @@
                 "issues": "https://github.com/numencode/wn-dropboxadapter-plugin/issues",
                 "source": "https://github.com/numencode/wn-dropboxadapter-plugin"
             },
-            "time": "2026-11-05T21:05:01+00:00"
+            "time": "2026-11-18T18:31:18+00:00"
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v2.2.1",
+            "version": "v2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "42b47691dbf8372f86c7554f5237ce63fa3c93b8"
+                "reference": "eeeb95933a2018e87159f419f9395205a2e51a67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/42b47691dbf8372f86c7554f5237ce63fa3c93b8",
-                "reference": "42b47691dbf8372f86c7554f5237ce63fa3c93b8",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/eeeb95933a2018e87159f419f9395205a2e51a67",
+                "reference": "eeeb95933a2018e87159f419f9395205a2e51a67",
                 "shasum": ""
             },
             "require": {
@@ -3404,20 +3404,20 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2026-11-17T18:13:12+00:00"
+            "time": "2026-11-18T18:31:10+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-syncops-plugin.git",
-                "reference": "c439a5f033f7c5004593e265a90dcd1339ce1e13"
+                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/c439a5f033f7c5004593e265a90dcd1339ce1e13",
-                "reference": "c439a5f033f7c5004593e265a90dcd1339ce1e13",
+                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/c388c650ee782881f9c4d8e2d702d949faafd739",
+                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739",
                 "shasum": ""
             },
             "require": {
@@ -3470,20 +3470,20 @@
                 "issues": "https://github.com/numencode/wn-syncops-plugin/issues",
                 "source": "https://github.com/numencode/wn-syncops-plugin"
             },
-            "time": "2026-11-08T08:44:25+00:00"
+            "time": "2026-11-18T18:31:15+00:00"
         },
         {
             "name": "numencode/wn-widgets-plugin",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-widgets-plugin.git",
-                "reference": "eac0ed2de7465a7a6706218b03e0d7bd8a6bb6a2"
+                "reference": "c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/eac0ed2de7465a7a6706218b03e0d7bd8a6bb6a2",
-                "reference": "eac0ed2de7465a7a6706218b03e0d7bd8a6bb6a2",
+                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa",
+                "reference": "c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa",
                 "shasum": ""
             },
             "require": {
@@ -3535,7 +3535,7 @@
                 "issues": "https://github.com/numencode/wn-widgets-plugin/issues",
                 "source": "https://github.com/numencode/wn-widgets-plugin"
             },
-            "time": "2026-11-17T18:24:20+00:00"
+            "time": "2026-11-18T18:31:13+00:00"
         },
         {
             "name": "nunomaduro/termwind",
