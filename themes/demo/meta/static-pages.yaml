@@ -2,3 +2,4 @@ static-pages:
     demo: {  }
     new-page: {  }
     bricks: {  }
+    no-bricks-on-lang: {  }

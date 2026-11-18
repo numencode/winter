@@ -1,9 +1,6 @@
 [viewBag]
 title = "Bricks"
 url = "/bricks"
-layout = "bricks"
-is_hidden = 0
-navigation_hidden = 0
 bricks[0][content] = "<p>Stage 4 bricks - this is just a content</p>"
 bricks[0][_group] = "text"
 bricks[1][text] = "Hello \"bricks\" & friends"
@@ -36,7 +33,18 @@ bricks[8][text] = "Press me!"
 bricks[8][url] = "/"
 bricks[8][style] = "primary"
 bricks[8][new_window] = 0
+bricks[8][_hidden] = 1
 bricks[8][_group] = "button"
+bricks[9][text] = "Press me again!"
+bricks[9][url] = "/"
+bricks[9][style] = "secondary"
+bricks[9][new_window] = 1
+bricks[9][_anchor] = "pressbuttonnow"
+bricks[9][_class] = "press-button-now"
+bricks[9][_group] = "button"
+layout = "bricks"
+is_hidden = 0
+navigation_hidden = 0
 localeUrl[sl] = "/opeke"
 ==
 <p>This is the content under the bricks.</p>
