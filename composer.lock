@@ -3342,16 +3342,16 @@
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v2.2.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "eeeb95933a2018e87159f419f9395205a2e51a67"
+                "reference": "46ca7d810182277d88979463dbd85d886d4566fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/eeeb95933a2018e87159f419f9395205a2e51a67",
-                "reference": "eeeb95933a2018e87159f419f9395205a2e51a67",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/46ca7d810182277d88979463dbd85d886d4566fd",
+                "reference": "46ca7d810182277d88979463dbd85d886d4566fd",
                 "shasum": ""
             },
             "require": {
@@ -3404,7 +3404,7 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2026-11-18T18:31:10+00:00"
+            "time": "2026-11-18T21:43:41+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
@@ -3474,21 +3474,21 @@
         },
         {
             "name": "numencode/wn-widgets-plugin",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-widgets-plugin.git",
-                "reference": "db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea"
+                "reference": "dc678841cdc5be867587a50664f1a78aef9e8fcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea",
-                "reference": "db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea",
+                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/dc678841cdc5be867587a50664f1a78aef9e8fcd",
+                "reference": "dc678841cdc5be867587a50664f1a78aef9e8fcd",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0",
-                "numencode/wn-fundamentals-plugin": "^2.1",
+                "numencode/wn-fundamentals-plugin": "^2.3",
                 "php": "^8.2"
             },
             "suggest": {
@@ -3535,7 +3535,7 @@
                 "issues": "https://github.com/numencode/wn-widgets-plugin/issues",
                 "source": "https://github.com/numencode/wn-widgets-plugin"
             },
-            "time": "2026-11-18T19:04:45+00:00"
+            "time": "2026-11-18T21:45:13+00:00"
         },
         {
             "name": "nunomaduro/termwind",
