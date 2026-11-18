@@ -3474,16 +3474,16 @@
         },
         {
             "name": "numencode/wn-widgets-plugin",
-            "version": "v2.1.1",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-widgets-plugin.git",
-                "reference": "c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa"
+                "reference": "db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa",
-                "reference": "c5400a3ab9059acb90c2b7ea3e4e8bbc9040fcaa",
+                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea",
+                "reference": "db7fdf1aaa7c9d6d3a42a3d1cbcadfc171837dea",
                 "shasum": ""
             },
             "require": {
@@ -3535,7 +3535,7 @@
                 "issues": "https://github.com/numencode/wn-widgets-plugin/issues",
                 "source": "https://github.com/numencode/wn-widgets-plugin"
             },
-            "time": "2026-11-18T18:31:13+00:00"
+            "time": "2026-11-18T19:04:45+00:00"
         },
         {
             "name": "nunomaduro/termwind",
