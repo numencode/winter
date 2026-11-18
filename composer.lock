@@ -3283,12 +3283,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-dropboxadapter-plugin.git",
-                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80"
+                "reference": "73ecab4f1909c0354a7a379dfe19549f2db0ce47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/34c389bc7bc8e80df3371db434b4723166cdbc80",
-                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80",
+                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/73ecab4f1909c0354a7a379dfe19549f2db0ce47",
+                "reference": "73ecab4f1909c0354a7a379dfe19549f2db0ce47",
                 "shasum": ""
             },
             "require": {
