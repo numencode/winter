@@ -3342,16 +3342,16 @@
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "5c8544b92772109f1f61422decd04a8240682b00"
+                "reference": "232570db5657bed3fdc838745f69eb89ec98ef7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/5c8544b92772109f1f61422decd04a8240682b00",
-                "reference": "5c8544b92772109f1f61422decd04a8240682b00",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/232570db5657bed3fdc838745f69eb89ec98ef7f",
+                "reference": "232570db5657bed3fdc838745f69eb89ec98ef7f",
                 "shasum": ""
             },
             "require": {
@@ -3404,7 +3404,7 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2026-11-18T10:18:22+00:00"
+            "time": "2026-11-18T12:08:19+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
