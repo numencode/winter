@@ -3,3 +3,4 @@ static-pages:
     new-page: {  }
     bricks: {  }
     no-bricks-on-lang: {  }
+    shared-bricks: {  }
