@@ -32,3 +32,8 @@ items:
             locale:
                 sl:
                     title: Opeke
+    -
+        title: Blog
+        type: cms-page
+        reference: blog/blog
+        code: blog
