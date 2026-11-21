@@ -1,0 +1,46 @@
+title = "Blog category"
+url = "/blog/category/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Kategorija bloga"
+localeUrl[sl] = "/novice/kategorija/:slug/:page?"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 6
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[blogTagList]
+limit = 12
+sortOrder = "count"
+showPostCount = 0
+tagPage = "blog/tag"
+
+[blogBreadcrumbs]
+categoryPage = "blog/category"
+postsAlias = "blogPosts"
+==
+<?php
+function onEnd()
+{
+    // An unknown category is a 404
+    if (!$this->category) {
+        return $this->controller->run('404');
+    }
+}
+?>
+==
+{% set breadcrumbsHtml %}{% component 'blogBreadcrumbs' %}{% endset %}
+{% partial 'site/page-header' title=category.name intro=category.description eyebrow=('Posts in'|_) breadcrumbs=breadcrumbsHtml %}
+{% partial 'blog/list' posts=posts pageParam=pageParam emptyMessage=('No posts yet.'|_) %}

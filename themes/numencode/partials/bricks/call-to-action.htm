@@ -1,0 +1,16 @@
+{#
+    Brick "call-to-action" (the theme's own brick type). Variables: title, content, button_text, button_url, style,
+    and brick = {code, index, field, id, anchor, class}.
+#}
+{% set style = style in ['dark', 'light', 'accent'] ? style : 'dark' %}
+<section class="brick brick--call-to-action brick--call-to-action-{{ style }}{% if brick.class %} {{ brick.class }}{% endif %}"{% if brick.anchor %} id="{{ brick.anchor }}"{% endif %}>
+    <div class="brick__inner">
+        <div>
+            {% if title %}<h2 class="brick__title">{{ title }}</h2>{% endif %}
+            {% if content %}<div class="brick__content">{{ content|raw }}</div>{% endif %}
+        </div>
+        {% if button_text and button_url %}
+            <a class="btn btn-lg {{ style == 'light' ? 'btn-primary' : 'btn-light' }} flex-shrink-0" href="{{ button_url }}">{{ button_text }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+        {% endif %}
+    </div>
+</section>

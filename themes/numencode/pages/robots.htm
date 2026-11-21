@@ -1,0 +1,15 @@
+title = "robots.txt"
+url = "/robots.txt"
+description = "A demo site: asks every crawler to stay away (see also the robots meta tags and the X-Robots-Tag header)"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    return Response::make("User-agent: *\nDisallow: /\n", 200, [
+        'Content-Type' => 'text/plain; charset=UTF-8',
+        'X-Robots-Tag' => 'noindex, nofollow',
+    ]);
+}
+?>
+==

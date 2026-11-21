@@ -1,0 +1,29 @@
+{# The blog sidebar: categories (Winter.Blog's blogCategories) and tags (BlogExtension's blogTagList), when on the page #}
+<div class="blog-sidebar">
+    {% if categories is defined and categories|length %}
+        <section class="sidebar-box">
+            <h2 class="h6 text-uppercase sidebar-box__title">{{ 'Categories'|_ }}</h2>
+            <ul class="list-unstyled mb-0 category-list">
+                {% for category in categories %}
+                    <li>
+                        <a href="{{ category.url }}" class="d-flex justify-content-between{{ category.slug == currentCategorySlug ? ' active' }}">
+                            <span>{{ category.name }}</span>
+                            <span class="badge rounded-pill text-bg-light">{{ category.post_count }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+    {% if tags is defined and tags|length %}
+        <section class="sidebar-box">
+            <h2 class="h6 text-uppercase sidebar-box__title">{{ 'Tags'|_ }}</h2>
+            <div class="d-flex flex-wrap gap-2">
+                {% for tag in tags %}
+                    <a href="{{ tag.url }}" class="tag-pill">{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+            <p class="mt-3 mb-0 small"><a href="{{ 'blog/tags'|page }}">{{ 'All tags'|_ }} &rarr;</a></p>
+        </section>
+    {% endif %}
+</div>

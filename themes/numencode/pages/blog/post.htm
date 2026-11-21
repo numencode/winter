@@ -1,0 +1,124 @@
+title = "Blog post"
+url = "/blog/post/:slug"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Objava"
+localeUrl[sl] = "/novice/objava/:slug"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogBreadcrumbs]
+categoryPage = "blog/category"
+
+[blogReadingTime]
+
+[blogTagPost]
+tagPage = "blog/tag"
+
+[blogTagRelated]
+limit = 3
+postPage = "blog/post"
+categoryPage = "blog/category"
+tagPage = "blog/tag"
+==
+<?php
+function onEnd()
+{
+    if (!$this->post) {
+        return $this->controller->run('404');
+    }
+
+    $this->page->meta_title = $this->post->title;
+    $this->page->meta_description = strip_tags($this->post->summary);
+}
+?>
+==
+{% set pictures = post.pictures %}
+{% set breadcrumbsHtml %}{% component 'blogBreadcrumbs' %}{% endset %}
+{% set meta %}
+    <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i><time datetime="{{ post.published_at|date('c') }}">{{ post.published_at|date('winter.blog::lang.post.date_format'|trans) }}</time></span>
+    {% if post.user %}<span><i class="bi bi-person-circle me-1" aria-hidden="true"></i>{{ 'Written by'|_ }} {{ post.user.first_name }} {{ post.user.last_name }}</span>{% endif %}
+    <span><i class="bi bi-clock me-1" aria-hidden="true"></i>{% component 'blogReadingTime' %}</span>
+{% endset %}
+
+<header class="page-header page-header--post{{ post.primaryPicture ? ' page-header--picture' }}"{% if post.primaryPicture %} style="--page-header-picture: url('{{ post.primaryPicture.picture|media|resize(1920, 640, {mode: 'crop'}) }}')"{% endif %}>
+    <div class="container">
+        {{ breadcrumbsHtml|raw }}
+        <h1 class="page-header__title">{{ post.title }}</h1>
+        <p class="post-header-meta">{{ meta|raw }}</p>
+    </div>
+</header>
+
+<div class="container page-section">
+    <div class="row g-5">
+        <article class="col-lg-8 post-body">
+            {% if post.excerpt %}
+                <p class="lead">{{ post.excerpt }}</p>
+            {% endif %}
+
+            {# The post's bricks (NumenCode.Bricks, tab "Bricks" in the post form), else its content #}
+            {% set bricksHtml = renderBricks(post.bricks ?? [], 'post') %}
+            <div class="post-content">
+                {{ bricksHtml|trim ? bricksHtml|raw : post.content_html|raw }}
+            </div>
+
+            {# The post's picture gallery (BlogExtension), without the header picture #}
+            {% if pictures|length > 1 %}
+                <section class="mt-5">
+                    <h2 class="h4 mb-3">{{ 'Gallery'|_ }}</h2>
+                    <div class="row g-3">
+                        {% for picture in pictures|slice(1) %}
+                            <div class="col-6 col-md-4">
+                                <a href="{{ picture.picture|media }}" class="d-block" data-gallery="post">
+                                    <img class="img-fluid rounded" src="{{ picture.picture|media|resize(480, 320, {mode: 'crop'}) }}" alt="{{ picture.title }}" loading="lazy">
+                                </a>
+                                {% if picture.title %}<p class="small text-body-secondary mt-1 mb-0">{{ picture.title }}</p>{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+
+            {# Attached files (BlogExtension) #}
+            {% if post.files|length %}
+                <section class="mt-5">
+                    <h2 class="h4 mb-3">{{ 'Attachments'|_ }}</h2>
+                    <ul class="list-group">
+                        {% for file in post.files %}
+                            <li class="list-group-item">
+                                <i class="bi bi-file-earmark-text me-2" aria-hidden="true"></i>
+                                <a href="{{ file.file|media }}">{{ file.title ?: file.file }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            {% endif %}
+
+            <div class="mt-5 pt-4 border-top">
+                {% component 'blogTagPost' %}
+            </div>
+            <p class="mt-4"><a href="{{ 'blog/blog'|page }}">&larr; {{ 'Back to the blog'|_ }}</a></p>
+        </article>
+
+        <aside class="col-lg-4">
+            <section class="sidebar-box">
+                <h2 class="h6 text-uppercase sidebar-box__title">{{ 'Related posts'|_ }}</h2>
+                {% component 'blogTagRelated' %}
+            </section>
+            {% if post.categories|length %}
+                <section class="sidebar-box">
+                    <h2 class="h6 text-uppercase sidebar-box__title">{{ 'Categories'|_ }}</h2>
+                    <div class="d-flex flex-wrap gap-2">
+                        {% for category in post.categories %}
+                            <a href="{{ category.url }}" class="tag-pill">{{ category.name }}</a>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+        </aside>
+    </div>
+</div>

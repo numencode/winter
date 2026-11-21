@@ -1,0 +1,22 @@
+# A component brick defined by the theme: Winter.Blog's "Posts" component becomes a brick. Its properties become the
+# brick's fields; these overrides hide the ones an editor doesn't need. The component renders its own template,
+# styled in assets/css/theme.css (.post-list).
+name: Latest blog posts
+description: The newest posts of the blog (Winter.Blog's Posts component)
+icon: icon-newspaper-o
+component: Winter\Blog\Components\Posts
+fields:
+    pageNumber:
+        hidden: true
+    categoryPage:
+        default: blog/category
+        hidden: true
+    postPage:
+        default: blog/post
+        hidden: true
+    exceptPost:
+        hidden: true
+    exceptCategories:
+        hidden: true
+    postsPerPage:
+        default: '3'

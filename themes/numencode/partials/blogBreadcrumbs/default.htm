@@ -1,0 +1,18 @@
+{# Theme override of BlogExtension's breadcrumbs: the home link points to the home page in the visitor's language #}
+{% set breadcrumbs = __SELF__.breadcrumbs %}
+
+{% if breadcrumbs %}
+    <nav aria-label="{{ 'numencode.blogextension::lang.frontend.breadcrumbs'|trans }}">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ 'home'|staticPage }}">{{ 'Home'|_ }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ 'blog/blog'|page }}">{{ 'Blog'|_ }}</a></li>
+            {% for breadcrumb in breadcrumbs %}
+                {% if breadcrumb.isActive or not breadcrumb.url %}
+                    <li class="breadcrumb-item{{ breadcrumb.isActive ? ' active' }}"{% if breadcrumb.isActive %} aria-current="page"{% endif %}>{{ breadcrumb.title }}</li>
+                {% else %}
+                    <li class="breadcrumb-item"><a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </nav>
+{% endif %}

@@ -1,0 +1,18 @@
+{# Pagination of a paginated post list. Variables: posts, pageParam (the URL parameter of the page number) #}
+{% if posts.lastPage > 1 %}
+    <nav class="mt-5" aria-label="{{ 'Posts'|_ }}">
+        <ul class="pagination justify-content-center">
+            <li class="page-item{{ posts.currentPage == 1 ? ' disabled' }}">
+                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage - 1 }) }}">&larr; {{ 'Previous'|_ }}</a>
+            </li>
+            {% for page in 1..posts.lastPage %}
+                <li class="page-item{{ posts.currentPage == page ? ' active' }}">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}"{% if posts.currentPage == page %} aria-current="page"{% endif %}>{{ page }}</a>
+                </li>
+            {% endfor %}
+            <li class="page-item{{ posts.currentPage == posts.lastPage ? ' disabled' }}">
+                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage + 1 }) }}">{{ 'Next'|_ }} &rarr;</a>
+            </li>
+        </ul>
+    </nav>
+{% endif %}
