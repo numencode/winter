@@ -3280,16 +3280,16 @@
         },
         {
             "name": "numencode/wn-bricks-plugin",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-bricks-plugin.git",
-                "reference": "ce22b196361f57472c86f3f85bf6a755b898ce63"
+                "reference": "7af0b95852b93a4c1ac085fd2180bb68e6fa66b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-bricks-plugin/zipball/ce22b196361f57472c86f3f85bf6a755b898ce63",
-                "reference": "ce22b196361f57472c86f3f85bf6a755b898ce63",
+                "url": "https://api.github.com/repos/numencode/wn-bricks-plugin/zipball/7af0b95852b93a4c1ac085fd2180bb68e6fa66b0",
+                "reference": "7af0b95852b93a4c1ac085fd2180bb68e6fa66b0",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3340,7 @@
                 "issues": "https://github.com/numencode/wn-bricks-plugin/issues",
                 "source": "https://github.com/numencode/wn-bricks-plugin"
             },
-            "time": "2026-11-20T23:41:27+00:00"
+            "time": "2026-11-21T15:40:05+00:00"
         },
         {
             "name": "numencode/wn-dropboxadapter-plugin",
