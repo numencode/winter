@@ -1,7 +1,8 @@
 {#
-    The main navigation: the "main-menu" static menu (Winter.Pages) and the language switcher (Winter.Translate's
-    localePicker, which redirects to the page's URL in the chosen language). A menu item with sub-items becomes a
-    dropdown; its own page is the first entry ("Overview").
+    The main navigation: the "main-menu" static menu (Winter.Pages) and the language switcher. The switcher uses plain
+    links to the current page's URL in each language (Winter.Translate's alternateHrefLangElements component, which
+    knows the translated URLs of static pages, CMS pages and blog posts), so the language comes from the URL only.
+    A menu item with sub-items becomes a dropdown; its own page is the first entry ("Overview").
 #}
 {% set homeUrl = 'home'|staticPage %}
 <a class="visually-hidden-focusable skip-link" href="#content">{{ 'Skip to content'|_ }}</a>
@@ -48,11 +49,11 @@
             {% endif %}
 
             {% if locales is defined and locales|length > 1 %}
+                {% set localeUrls = alternateHrefLangElements.locales() %}
                 <ul class="navbar-nav language-switch" aria-label="{{ 'Language'|_ }}">
                     {% for code, name in locales %}
                         <li class="nav-item">
-                            <a class="nav-link{{ code == activeLocale ? ' active' }}" href="#" title="{{ name }}" lang="{{ code }}"
-                                data-request="onSwitchLocale" data-request-data="locale: '{{ code }}'"{% if code == activeLocale %} aria-current="true"{% endif %}>{{ code|upper }}</a>
+                            <a class="nav-link{{ code == activeLocale ? ' active' }}" href="{{ ('/' ~ localeUrls[code]|trim('/', 'left'))|app }}" title="{{ name }}" lang="{{ code }}" hreflang="{{ code }}"{% if code == activeLocale %} aria-current="true"{% endif %}>{{ code|upper }}</a>
                         </li>
                     {% endfor %}
                 </ul>

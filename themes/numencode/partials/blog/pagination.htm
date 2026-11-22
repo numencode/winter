@@ -2,17 +2,25 @@
 {% if posts.lastPage > 1 %}
     <nav class="mt-5" aria-label="{{ 'Posts'|_ }}">
         <ul class="pagination justify-content-center">
-            <li class="page-item{{ posts.currentPage == 1 ? ' disabled' }}">
-                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage - 1 }) }}">&larr; {{ 'Previous'|_ }}</a>
-            </li>
+            {% if posts.currentPage > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage - 1 }) }}">&larr; {{ 'Previous'|_ }}</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled"><span class="page-link">&larr; {{ 'Previous'|_ }}</span></li>
+            {% endif %}
             {% for page in 1..posts.lastPage %}
                 <li class="page-item{{ posts.currentPage == page ? ' active' }}">
                     <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}"{% if posts.currentPage == page %} aria-current="page"{% endif %}>{{ page }}</a>
                 </li>
             {% endfor %}
-            <li class="page-item{{ posts.currentPage == posts.lastPage ? ' disabled' }}">
-                <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage + 1 }) }}">{{ 'Next'|_ }} &rarr;</a>
-            </li>
+            {% if posts.currentPage < posts.lastPage %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ this.page.baseFileName|page({ (pageParam): posts.currentPage + 1 }) }}">{{ 'Next'|_ }} &rarr;</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled"><span class="page-link">{{ 'Next'|_ }} &rarr;</span></li>
+            {% endif %}
         </ul>
     </nav>
 {% endif %}
