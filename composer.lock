@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64af53de68a942b9ee0544005afda7ab",
+    "content-hash": "6bbc9ac8ff4717addfcd8d8a7d05576f",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3213,16 +3213,16 @@
         },
         {
             "name": "numencode/wn-blogextension-plugin",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-blogextension-plugin.git",
-                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51"
+                "reference": "024796b1b41c1523a01e990d348b4db7806e5258"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/a5f966d3218afde97e2d11978ac16c42405b5a51",
-                "reference": "a5f966d3218afde97e2d11978ac16c42405b5a51",
+                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/024796b1b41c1523a01e990d348b4db7806e5258",
+                "reference": "024796b1b41c1523a01e990d348b4db7806e5258",
                 "shasum": ""
             },
             "require": {
@@ -3233,6 +3233,7 @@
             },
             "suggest": {
                 "fakerphp/faker": "Enables the Faker page (generates demo categories, posts and pictures while app.debug is on).",
+                "numencode/wn-bricks-plugin": "Enables bricks on blog posts (a translatable block-based content builder).",
                 "winter/wn-pages-plugin": "Enables blog tags as menu items (and in Winter.Sitemap).",
                 "winter/wn-translate-plugin": "Enables translations of tags, pictures and files."
             },
@@ -3275,20 +3276,84 @@
                 "issues": "https://github.com/numencode/wn-blogextension-plugin/issues",
                 "source": "https://github.com/numencode/wn-blogextension-plugin"
             },
-            "time": "2026-11-11T22:11:52+00:00"
+            "time": "2026-11-19T17:56:13+00:00"
         },
         {
-            "name": "numencode/wn-dropboxadapter-plugin",
-            "version": "v2.0.0",
+            "name": "numencode/wn-bricks-plugin",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/numencode/wn-dropboxadapter-plugin.git",
-                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80"
+                "url": "https://github.com/numencode/wn-bricks-plugin.git",
+                "reference": "7af0b95852b93a4c1ac085fd2180bb68e6fa66b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/34c389bc7bc8e80df3371db434b4723166cdbc80",
-                "reference": "34c389bc7bc8e80df3371db434b4723166cdbc80",
+                "url": "https://api.github.com/repos/numencode/wn-bricks-plugin/zipball/7af0b95852b93a4c1ac085fd2180bb68e6fa66b0",
+                "reference": "7af0b95852b93a4c1ac085fd2180bb68e6fa66b0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0",
+                "numencode/wn-fundamentals-plugin": "^2.1",
+                "php": "^8.2"
+            },
+            "suggest": {
+                "winter/wn-pages-plugin": "Enables bricks on static pages.",
+                "winter/wn-translate-plugin": "Enables translations of the bricks per locale."
+            },
+            "type": "winter-plugin",
+            "extra": {
+                "installer-name": "bricks"
+            },
+            "autoload": {
+                "psr-4": {
+                    "NumenCode\\Bricks\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Blaz Orazem",
+                    "email": "blaz@orazem.si",
+                    "homepage": "https://orazem.si/",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Translatable, block-based content builder for Winter CMS static pages: editors compose pages from bricks defined as YAML fields and Twig markup in plugins or themes.",
+            "homepage": "https://www.numencode.com",
+            "keywords": [
+                "blocks",
+                "bricks",
+                "laravel",
+                "numencode",
+                "page builder",
+                "plugin",
+                "static pages",
+                "translate",
+                "winter",
+                "winter cms"
+            ],
+            "support": {
+                "issues": "https://github.com/numencode/wn-bricks-plugin/issues",
+                "source": "https://github.com/numencode/wn-bricks-plugin"
+            },
+            "time": "2026-11-21T15:40:05+00:00"
+        },
+        {
+            "name": "numencode/wn-dropboxadapter-plugin",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/numencode/wn-dropboxadapter-plugin.git",
+                "reference": "5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/numencode/wn-dropboxadapter-plugin/zipball/5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc",
+                "reference": "5d0a11aeb6bfc8f1982e77636e5996e5da2cb5dc",
                 "shasum": ""
             },
             "require": {
@@ -3338,20 +3403,20 @@
                 "issues": "https://github.com/numencode/wn-dropboxadapter-plugin/issues",
                 "source": "https://github.com/numencode/wn-dropboxadapter-plugin"
             },
-            "time": "2026-11-05T21:05:01+00:00"
+            "time": "2026-11-18T18:31:18+00:00"
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v2.1.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "0be75c66e4587d93e4e26a0ebed5a6b451fdac55"
+                "reference": "77b46d91058784f08459a236036c08d01c6a5c78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/0be75c66e4587d93e4e26a0ebed5a6b451fdac55",
-                "reference": "0be75c66e4587d93e4e26a0ebed5a6b451fdac55",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/77b46d91058784f08459a236036c08d01c6a5c78",
+                "reference": "77b46d91058784f08459a236036c08d01c6a5c78",
                 "shasum": ""
             },
             "require": {
@@ -3361,7 +3426,8 @@
                 "winter/storm": "^1.2"
             },
             "suggest": {
-                "winter/wn-translate-plugin": "Enables translations of fields inside relation repeaters and the language selector in backend forms."
+                "winter/wn-pages-plugin": "Enables the static page settings in the main tabs and, with Winter.Translate, clearing its caches of all locales.",
+                "winter/wn-translate-plugin": "Enables translations of fields inside relation repeaters, the language selector in backend forms and clearing the Winter.Pages caches of all locales."
             },
             "type": "winter-plugin",
             "extra": {
@@ -3403,20 +3469,20 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2026-11-06T16:36:52+00:00"
+            "time": "2026-11-20T23:33:12+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-syncops-plugin.git",
-                "reference": "f99be66f350787ab9c0e71c9ad0c3b8c7214c437"
+                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/f99be66f350787ab9c0e71c9ad0c3b8c7214c437",
-                "reference": "f99be66f350787ab9c0e71c9ad0c3b8c7214c437",
+                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/c388c650ee782881f9c4d8e2d702d949faafd739",
+                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739",
                 "shasum": ""
             },
             "require": {
@@ -3469,25 +3535,25 @@
                 "issues": "https://github.com/numencode/wn-syncops-plugin/issues",
                 "source": "https://github.com/numencode/wn-syncops-plugin"
             },
-            "time": "2026-11-08T08:44:25+00:00"
+            "time": "2026-11-18T18:31:15+00:00"
         },
         {
             "name": "numencode/wn-widgets-plugin",
-            "version": "v2.0.1",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-widgets-plugin.git",
-                "reference": "cff56cd6d1e76c6b15d0d251ff68db1aa045f588"
+                "reference": "dc678841cdc5be867587a50664f1a78aef9e8fcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/cff56cd6d1e76c6b15d0d251ff68db1aa045f588",
-                "reference": "cff56cd6d1e76c6b15d0d251ff68db1aa045f588",
+                "url": "https://api.github.com/repos/numencode/wn-widgets-plugin/zipball/dc678841cdc5be867587a50664f1a78aef9e8fcd",
+                "reference": "dc678841cdc5be867587a50664f1a78aef9e8fcd",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0",
-                "numencode/wn-fundamentals-plugin": "^2.1",
+                "numencode/wn-fundamentals-plugin": "^2.3",
                 "php": "^8.2"
             },
             "suggest": {
@@ -3534,7 +3600,7 @@
                 "issues": "https://github.com/numencode/wn-widgets-plugin/issues",
                 "source": "https://github.com/numencode/wn-widgets-plugin"
             },
-            "time": "2026-11-16T18:46:24+00:00"
+            "time": "2026-11-18T21:45:13+00:00"
         },
         {
             "name": "nunomaduro/termwind",

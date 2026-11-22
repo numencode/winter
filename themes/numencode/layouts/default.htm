@@ -1,0 +1,22 @@
+description = "CMS pages (blog, errors)"
+
+[localePicker]
+forceUrl = 1
+
+[staticMenu mainMenu]
+code = "main-menu"
+==
+<!DOCTYPE html>
+<html lang="{{ activeLocale }}">
+<head>
+    {% partial 'site/head' %}
+</head>
+<body class="d-flex flex-column min-vh-100">
+    {% partial 'site/header' %}
+    <main id="content" class="flex-grow-1">
+        {% page %}
+    </main>
+    {% partial 'site/footer' %}
+    {% partial 'site/scripts' %}
+</body>
+</html>

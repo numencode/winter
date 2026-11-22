@@ -1,0 +1,31 @@
+description = "Page with bricks: one shared structure, other languages translate its texts"
+
+[staticPage]
+useContent = 0
+
+[localePicker]
+forceUrl = 1
+
+[staticMenu mainMenu]
+code = "main-menu"
+==
+{variable type="textarea" name="intro" label="Intro" tab="Content" size="small" comment="Shown below the title."}{/variable}
+{variable type="mediafinder" name="header_picture" label="Header picture" tab="Content" mode="image"}{/variable}
+{variable type="bricks" name="bricks" label="Bricks" tab="Content" translation="fields"}{/variable}
+<!DOCTYPE html>
+<html lang="{{ activeLocale }}">
+<head>
+    {% partial 'site/head' %}
+</head>
+<body class="d-flex flex-column min-vh-100">
+    {% partial 'site/header' %}
+    <main id="content" class="flex-grow-1">
+        {% partial 'site/page-header' title=this.page.title intro=intro picture=header_picture %}
+        <div class="page-body">
+            {{ renderBricks() }}
+        </div>
+    </main>
+    {% partial 'site/footer' %}
+    {% partial 'site/scripts' %}
+</body>
+</html>

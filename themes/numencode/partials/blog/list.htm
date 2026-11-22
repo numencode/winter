@@ -1,0 +1,20 @@
+{# A grid of post cards with pagination and the blog sidebar. Variables: posts, pageParam, emptyMessage #}
+<div class="container page-section">
+    <div class="row g-5">
+        <div class="col-lg-8">
+            <div class="row g-4">
+                {% for post in posts %}
+                    <div class="col-md-6">
+                        {% partial 'blog/post-card' post=post %}
+                    </div>
+                {% else %}
+                    <p class="lead text-body-secondary">{{ emptyMessage }}</p>
+                {% endfor %}
+            </div>
+            {% partial 'blog/pagination' posts=posts pageParam=pageParam %}
+        </div>
+        <aside class="col-lg-4">
+            {% partial 'blog/sidebar' %}
+        </aside>
+    </div>
+</div>

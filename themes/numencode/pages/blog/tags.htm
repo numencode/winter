@@ -1,0 +1,21 @@
+title = "Tags"
+url = "/blog/tags"
+layout = "default"
+description = "Every blog tag"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Oznake"
+localeUrl[sl] = "/novice/oznake"
+
+[blogTagList]
+sortOrder = "name"
+showPostCount = 1
+showEmptyTags = 0
+tagPage = "blog/tag"
+==
+{% partial 'site/page-header' title=this.page.title intro=('Every tag with the number of its posts.'|_) %}
+<div class="container page-section">
+    {% component 'blogTagList' %}
+    <p class="mt-5"><a href="{{ 'blog/blog'|page }}">&larr; {{ 'Back to the blog'|_ }}</a></p>
+</div>

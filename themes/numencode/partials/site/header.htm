@@ -1,0 +1,62 @@
+{#
+    The main navigation: the "main-menu" static menu (Winter.Pages) and the language switcher (Winter.Translate's
+    localePicker, which redirects to the page's URL in the chosen language). A menu item with sub-items becomes a
+    dropdown; its own page is the first entry ("Overview").
+#}
+{% set homeUrl = 'home'|staticPage %}
+<a class="visually-hidden-focusable skip-link" href="#content">{{ 'Skip to content'|_ }}</a>
+
+<nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" aria-label="Main">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{{ homeUrl }}">
+            <img src="{{ 'assets/images/favicon.svg'|theme }}" alt="" width="28" height="28">
+            <span>NumenCode <span class="fw-light">Demo</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="{{ 'Toggle navigation'|_ }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+            {% if mainMenu is defined and mainMenu.menuItems %}
+                <ul class="navbar-nav me-auto">
+                    {% for item in mainMenu.menuItems|filter(i => not i.viewBag.isHidden) %}
+                        {% set active = item.isActive or item.isChildActive %}
+                        {% if item.items %}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle{{ active ? ' active' }}" href="{{ item.url }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+                                <ul class="dropdown-menu">
+                                    {% if item.url %}
+                                        <li><a class="dropdown-item{{ item.isActive ? ' active' }}" href="{{ item.url }}">{{ item.viewBag.overviewTitle ?: 'Overview'|_ }}</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                    {% endif %}
+                                    {% for child in item.items|filter(c => not c.viewBag.isHidden) %}
+                                        <li>
+                                            <a class="dropdown-item{{ child.isActive ? ' active' }}" href="{{ child.url }}"{% if child.viewBag.isExternal %} target="_blank" rel="noopener"{% endif %}>
+                                                {{ child.title }}{% if child.viewBag.isExternal %} <i class="bi bi-box-arrow-up-right small" aria-hidden="true"></i>{% endif %}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link{{ active ? ' active' }}" href="{{ item.url }}"{% if active %} aria-current="page"{% endif %}{% if item.viewBag.isExternal %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if locales is defined and locales|length > 1 %}
+                <ul class="navbar-nav language-switch" aria-label="{{ 'Language'|_ }}">
+                    {% for code, name in locales %}
+                        <li class="nav-item">
+                            <a class="nav-link{{ code == activeLocale ? ' active' }}" href="#" title="{{ name }}" lang="{{ code }}"
+                                data-request="onSwitchLocale" data-request-data="locale: '{{ code }}'"{% if code == activeLocale %} aria-current="true"{% endif %}>{{ code|upper }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</nav>

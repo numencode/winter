@@ -1,0 +1,48 @@
+{% set homeUrl = 'home'|staticPage %}
+<footer class="site-footer mt-auto">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <a class="d-inline-flex align-items-center gap-2 text-white text-decoration-none fs-5 mb-2" href="{{ homeUrl }}">
+                    <img src="{{ 'assets/images/favicon.svg'|theme }}" alt="" width="28" height="28">
+                    <span>NumenCode <span class="fw-light">Demo</span></span>
+                </a>
+                <p class="mb-2">{{ 'A demo of the NumenCode plugins for Winter CMS.'|_ }}</p>
+                <p class="small footer-muted mb-0">
+                    <i class="bi bi-eye-slash me-1" aria-hidden="true"></i>{{ 'All content on this site is demo content. The site is not meant to be indexed by search engines.'|_ }}
+                </p>
+            </div>
+            <div class="col-6 col-lg-4">
+                <h2 class="h6 text-uppercase footer-heading">{{ 'Source code'|_ }}</h2>
+                <ul class="list-unstyled footer-links">
+                    {% for code, name in {
+                        'fundamentals': 'Fundamentals',
+                        'bricks': 'Bricks',
+                        'widgets': 'Widgets',
+                        'blogextension': 'Blog Extension',
+                        'syncops': 'SyncOps',
+                        'dropboxadapter': 'Dropbox Adapter'
+                    } %}
+                        <li><a href="https://github.com/numencode/wn-{{ code }}-plugin" target="_blank" rel="noopener nofollow"><i class="bi bi-github me-1" aria-hidden="true"></i>{{ name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+                <h2 class="h6 text-uppercase footer-heading">{{ 'Explore'|_ }}</h2>
+                <ul class="list-unstyled footer-links">
+                    {% if mainMenu is defined %}
+                        {% for item in mainMenu.menuItems|filter(i => not i.viewBag.isHidden) %}
+                            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+                    <li><a href="{{ 'blog/rss'|page }}"><i class="bi bi-rss me-1" aria-hidden="true"></i>{{ 'RSS feed'|_ }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="footer-rule">
+        <p class="small footer-muted mb-0 d-flex flex-wrap justify-content-between gap-2">
+            <span>&copy; {{ 'now'|date('Y') }} NumenCode</span>
+            <a href="https://wintercms.com" target="_blank" rel="noopener nofollow">{{ 'Built with Winter CMS'|_ }}</a>
+        </p>
+    </div>
+</footer>

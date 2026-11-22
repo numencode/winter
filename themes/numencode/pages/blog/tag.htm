@@ -1,0 +1,31 @@
+title = "Blog tag"
+url = "/blog/tag/:slug/:page?"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Oznaka bloga"
+localeUrl[sl] = "/novice/oznaka/:slug/:page?"
+
+[blogTagFilter]
+slug = "{{ :slug }}"
+pageNumber = "{{ :page }}"
+postsPerPage = 6
+sortOrder = "published_at desc"
+postPage = "blog/post"
+categoryPage = "blog/category"
+tagPage = "blog/tag"
+
+[blogCategories]
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[blogTagList]
+limit = 12
+sortOrder = "count"
+showPostCount = 0
+tagPage = "blog/tag"
+==
+{# blogTagFilter answers an unknown tag with a 404 #}
+{% partial 'site/page-header' title=('#' ~ tag.name) eyebrow=('Posts tagged'|_) %}
+{% partial 'blog/list' posts=posts pageParam=pageParam emptyMessage=('No posts with this tag yet.'|_) %}
