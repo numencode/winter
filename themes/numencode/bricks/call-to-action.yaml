@@ -1,0 +1,36 @@
+# A theme brick type (NumenCode.Bricks): new types in a theme's bricks/ folder are listed first in "Add brick",
+# under the theme's name. The markup is partials/bricks/call-to-action.htm.
+name: Call to action
+description: A highlighted box with a title, text and a button
+icon: icon-bullhorn
+titleFrom: title
+fields:
+    title:
+        label: Title
+        type: text
+        translatable: true
+    content:
+        label: Text
+        type: richeditor
+        size: small
+        translatable: true
+    button_text:
+        label: Button text
+        type: text
+        span: left
+        translatable: true
+    button_url:
+        label: Button link
+        type: text
+        span: right
+        comment: A page URL (e.g. /blog) or an external link
+        translatable: true
+        machineTranslation: false
+    style:
+        label: Style
+        type: dropdown
+        default: dark
+        options:
+            dark: Dark
+            light: Light
+            accent: Accent

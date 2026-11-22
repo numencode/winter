@@ -1,0 +1,233 @@
+name: 'Main menu'
+items:
+    -
+        title: Home
+        type: static-page
+        reference: home
+        code: home
+        viewBag:
+            locale:
+                sl:
+                    title: Domov
+    -
+        title: Bricks
+        type: static-page
+        reference: bricks
+        code: bricks
+        items:
+            -
+                title: 'The base set'
+                type: static-page
+                reference: bricks-base-set
+                code: bricks-base-set
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Osnovni nabor'
+            -
+                title: 'Shared structure'
+                type: static-page
+                reference: bricks-shared
+                code: bricks-shared
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Skupna struktura'
+            -
+                title: 'Per-language lists'
+                type: static-page
+                reference: bricks-per-language
+                code: bricks-per-language
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Seznami po jezikih'
+            -
+                title: 'Bricks inside bricks'
+                type: static-page
+                reference: bricks-nested
+                code: bricks-nested
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Gradniki v gradnikih'
+            -
+                title: 'Component bricks'
+                type: static-page
+                reference: bricks-components
+                code: bricks-components
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Komponente kot gradniki'
+        viewBag:
+            locale:
+                sl:
+                    title: Gradniki
+    -
+        title: Widgets
+        type: static-page
+        reference: widgets
+        code: widgets
+        items:
+            -
+                title: Promotions
+                type: static-page
+                reference: widgets-promotions
+                code: widgets-promotions
+                viewBag:
+                    locale:
+                        sl:
+                            title: Promocije
+            -
+                title: Features
+                type: static-page
+                reference: widgets-features
+                code: widgets-features
+                viewBag:
+                    locale:
+                        sl:
+                            title: Lastnosti
+            -
+                title: Highlights
+                type: static-page
+                reference: widgets-highlights
+                code: widgets-highlights
+                viewBag:
+                    locale:
+                        sl:
+                            title: Poudarki
+            -
+                title: Gallery
+                type: static-page
+                reference: widgets-gallery
+                code: widgets-gallery
+                viewBag:
+                    locale:
+                        sl:
+                            title: Galerija
+            -
+                title: Counters
+                type: static-page
+                reference: widgets-counters
+                code: widgets-counters
+                viewBag:
+                    locale:
+                        sl:
+                            title: Števci
+        viewBag:
+            locale:
+                sl:
+                    title: Pripomočki
+    -
+        title: Blog
+        type: cms-page
+        reference: blog/blog
+        code: blog
+        items:
+            -
+                title: Categories
+                type: all-blog-categories
+                cmsPage: blog/category
+                replace: true
+                nesting: false
+                viewBag:
+                    locale:
+                        sl:
+                            title: Kategorije
+            -
+                title: 'All tags'
+                type: cms-page
+                reference: blog/tags
+                code: blog-tags
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Vse oznake'
+        viewBag:
+            locale:
+                sl:
+                    title: Blog
+            overviewTitle: 'All posts'
+    -
+        title: Plugins
+        type: static-page
+        reference: plugins
+        code: plugins
+        items:
+            -
+                title: Fundamentals
+                type: static-page
+                reference: plugins-fundamentals
+                code: plugins-fundamentals
+                viewBag:
+                    locale:
+                        sl:
+                            title: Fundamentals
+            -
+                title: Bricks
+                type: static-page
+                reference: bricks
+                code: bricks
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Gradniki (Bricks)'
+            -
+                title: Widgets
+                type: static-page
+                reference: widgets
+                code: widgets
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Pripomočki (Widgets)'
+            -
+                title: 'Blog Extension'
+                type: static-page
+                reference: plugins-blog-extension
+                code: plugins-blog-extension
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Blog Extension'
+            -
+                title: SyncOps
+                type: static-page
+                reference: plugins-syncops
+                code: plugins-syncops
+                viewBag:
+                    locale:
+                        sl:
+                            title: SyncOps
+            -
+                title: 'Dropbox Adapter'
+                type: static-page
+                reference: plugins-dropbox-adapter
+                code: plugins-dropbox-adapter
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'Dropbox Adapter'
+            -
+                title: 'NumenCode on GitHub'
+                type: url
+                url: 'https://github.com/numencode'
+                viewBag:
+                    locale:
+                        sl:
+                            title: 'NumenCode na GitHubu'
+                    isExternal: '1'
+        viewBag:
+            locale:
+                sl:
+                    title: Vtičniki
+    -
+        title: About
+        type: static-page
+        reference: about
+        code: about
+        viewBag:
+            locale:
+                sl:
+                    title: 'O predstavitvi'

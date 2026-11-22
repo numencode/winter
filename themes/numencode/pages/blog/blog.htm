@@ -1,0 +1,30 @@
+title = "Blog"
+url = "/blog/:page?"
+layout = "default"
+description = "All blog posts"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Blog"
+localeUrl[sl] = "/novice/:page?"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 6
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[blogTagList]
+limit = 12
+sortOrder = "count"
+showPostCount = 0
+tagPage = "blog/tag"
+==
+{% partial 'site/page-header' title=this.page.title intro=('Release notes, tutorials and stories behind the NumenCode plugins.'|_) picture='/demo/blog/sunrise.jpg' %}
+{% partial 'blog/list' posts=posts pageParam=pageParam emptyMessage=('No posts yet.'|_) %}

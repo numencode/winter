@@ -1,0 +1,28 @@
+description = "Home page: bricks without a page header (shared structure)"
+
+[staticPage]
+useContent = 0
+
+[localePicker]
+forceUrl = 1
+
+[staticMenu mainMenu]
+code = "main-menu"
+==
+{variable type="bricks" name="bricks" label="Bricks" tab="Content" translation="fields"}{/variable}
+<!DOCTYPE html>
+<html lang="{{ activeLocale }}">
+<head>
+    {% partial 'site/head' %}
+</head>
+<body class="d-flex flex-column min-vh-100 page-home">
+    {% partial 'site/header' %}
+    <main id="content" class="flex-grow-1">
+        <div class="page-body page-body--home">
+            {{ renderBricks() }}
+        </div>
+    </main>
+    {% partial 'site/footer' %}
+    {% partial 'site/scripts' %}
+</body>
+</html>

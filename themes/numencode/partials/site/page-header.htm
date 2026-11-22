@@ -1,0 +1,12 @@
+{#
+    The page header: title, an optional intro text and an optional background picture.
+    Variables: title, intro, picture (media path), eyebrow (small text above the title), breadcrumbs (optional HTML).
+#}
+<header class="page-header{{ picture ? ' page-header--picture' }}"{% if picture %} style="--page-header-picture: url('{{ picture|media|resize(1920, 640, {mode: 'crop'}) }}')"{% endif %}>
+    <div class="container">
+        {% if breadcrumbs is defined and breadcrumbs %}{{ breadcrumbs|raw }}{% endif %}
+        {% if eyebrow is defined and eyebrow %}<p class="page-header__eyebrow">{{ eyebrow }}</p>{% endif %}
+        <h1 class="page-header__title">{{ title }}</h1>
+        {% if intro %}<p class="page-header__intro">{{ intro|nl2br }}</p>{% endif %}
+    </div>
+</header>

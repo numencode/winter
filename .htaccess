@@ -1,3 +1,11 @@
+##
+## A demo site: ask search engines not to index or follow anything, including pictures and files
+## (with the robots meta tags of the theme and its /robots.txt page)
+##
+<IfModule mod_headers.c>
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+</IfModule>
+
 <IfModule mod_rewrite.c>
 
     <IfModule mod_negotiation.c>

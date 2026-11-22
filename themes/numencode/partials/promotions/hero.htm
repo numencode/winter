@@ -1,0 +1,41 @@
+{#
+    A theme layout for NumenCode.Widgets' Promotions component: a full-width hero carousel. Layouts in
+    partials/promotions/ appear in the component's "Layout" dropdown (here "Hero"), next to the plugin's default.
+#}
+{% set group = __SELF__.group %}
+{% set carouselId = 'hero-' ~ __SELF__.alias %}
+{% set multiple = group.items|length > 1 %}
+
+<div id="{{ carouselId }}" class="carousel slide carousel-fade hero-carousel"{% if multiple %} data-bs-ride="carousel" data-bs-interval="7000"{% endif %}>
+    <div class="carousel-inner">
+        {% for item in group.items %}
+            <div class="carousel-item{{ loop.first ? ' active' }}">
+                <div class="hero-slide" style="--hero-picture: url('{{ item.picture ? item.picture|media|resize(1920, 820, {mode: 'crop'}) }}')">
+                    <div class="container hero-slide__content">
+                        {% if group.title and loop.first %}<p class="hero-slide__eyebrow">{{ group.title }}</p>{% endif %}
+                        {% if item.title %}<h2 class="hero-slide__title">{{ item.title }}</h2>{% endif %}
+                        {% if item.subtitle %}<p class="hero-slide__text">{{ item.subtitle }}</p>{% endif %}
+                        {% if item.link %}
+                            <a class="btn btn-light btn-lg mt-2" href="{{ item.link }}">{{ item.link_title ?: item.title }} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% if multiple %}
+        <div class="carousel-indicators hero-carousel__indicators">
+            {% for item in group.items %}
+                <button type="button" data-bs-target="#{{ carouselId }}" data-bs-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active" aria-current="true"{% endif %} aria-label="{{ item.title ?: loop.index }}"></button>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#{{ carouselId }}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ 'Previous'|_ }}</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#{{ carouselId }}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{{ 'Next'|_ }}</span>
+        </button>
+    {% endif %}
+</div>

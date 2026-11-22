@@ -1,0 +1,20 @@
+static-pages:
+    home: {  }
+    bricks:
+        bricks-base-set: {  }
+        bricks-shared: {  }
+        bricks-per-language: {  }
+        bricks-nested: {  }
+        bricks-components: {  }
+    widgets:
+        widgets-promotions: {  }
+        widgets-features: {  }
+        widgets-highlights: {  }
+        widgets-gallery: {  }
+        widgets-counters: {  }
+    plugins:
+        plugins-fundamentals: {  }
+        plugins-blog-extension: {  }
+        plugins-syncops: {  }
+        plugins-dropbox-adapter: {  }
+    about: {  }

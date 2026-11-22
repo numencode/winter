@@ -2,6 +2,21 @@
 
 /*
 |--------------------------------------------------------------------------
+| Keep .env Values Out Of The Process Environment
+|--------------------------------------------------------------------------
+|
+| With putenv() the .env values are shared by the whole process. Under a
+| threaded server (mod_php on Windows) PHP removes them at the end of one
+| request while another is still running, which then falls back to the
+| config defaults (e.g. the sqlite connection and another session cookie).
+| Without putenv() each request keeps its values in $_ENV and $_SERVER.
+|
+*/
+
+Illuminate\Support\Env::disablePutenv();
+
+/*
+|--------------------------------------------------------------------------
 | Create The Application
 |--------------------------------------------------------------------------
 |

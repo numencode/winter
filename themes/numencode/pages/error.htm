@@ -1,0 +1,16 @@
+title = "Error"
+url = "/error"
+layout = "default"
+is_hidden = 0
+
+[viewBag]
+localeTitle[sl] = "Napaka"
+==
+<section class="error-page">
+    <div class="container text-center">
+        <p class="error-page__code"><i class="bi bi-exclamation-octagon" aria-hidden="true"></i></p>
+        <h1 class="h2">{{ 'Something went wrong'|_ }}</h1>
+        <p class="lead text-body-secondary">{{ 'Please try again later.'|_ }}</p>
+        <a class="btn btn-primary mt-3" href="{{ 'home'|staticPage }}">{{ 'Back to the home page'|_ }}</a>
+    </div>
+</section>
