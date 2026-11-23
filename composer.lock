@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bbc9ac8ff4717addfcd8d8a7d05576f",
+    "content-hash": "9eb9d8c9567d04103a8e26e77ef0413d",
     "packages": [
         {
             "name": "assetic/framework",
@@ -3213,16 +3213,16 @@
         },
         {
             "name": "numencode/wn-blogextension-plugin",
-            "version": "v2.1.0",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-blogextension-plugin.git",
-                "reference": "024796b1b41c1523a01e990d348b4db7806e5258"
+                "reference": "ad7fc4cf4e868ced047cfeb11c548c4f48b23921"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/024796b1b41c1523a01e990d348b4db7806e5258",
-                "reference": "024796b1b41c1523a01e990d348b4db7806e5258",
+                "url": "https://api.github.com/repos/numencode/wn-blogextension-plugin/zipball/ad7fc4cf4e868ced047cfeb11c548c4f48b23921",
+                "reference": "ad7fc4cf4e868ced047cfeb11c548c4f48b23921",
                 "shasum": ""
             },
             "require": {
@@ -3276,7 +3276,7 @@
                 "issues": "https://github.com/numencode/wn-blogextension-plugin/issues",
                 "source": "https://github.com/numencode/wn-blogextension-plugin"
             },
-            "time": "2026-11-19T17:56:13+00:00"
+            "time": "2026-11-23T18:23:42+00:00"
         },
         {
             "name": "numencode/wn-bricks-plugin",
@@ -3473,16 +3473,16 @@
         },
         {
             "name": "numencode/wn-syncops-plugin",
-            "version": "v2.0.1",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-syncops-plugin.git",
-                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739"
+                "reference": "b5520f2ce2bd6a20f62192be35496ddfafa9d4e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/c388c650ee782881f9c4d8e2d702d949faafd739",
-                "reference": "c388c650ee782881f9c4d8e2d702d949faafd739",
+                "url": "https://api.github.com/repos/numencode/wn-syncops-plugin/zipball/b5520f2ce2bd6a20f62192be35496ddfafa9d4e4",
+                "reference": "b5520f2ce2bd6a20f62192be35496ddfafa9d4e4",
                 "shasum": ""
             },
             "require": {
@@ -3535,7 +3535,7 @@
                 "issues": "https://github.com/numencode/wn-syncops-plugin/issues",
                 "source": "https://github.com/numencode/wn-syncops-plugin"
             },
-            "time": "2026-11-18T18:31:15+00:00"
+            "time": "2026-11-23T18:21:07+00:00"
         },
         {
             "name": "numencode/wn-widgets-plugin",

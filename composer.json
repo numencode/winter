@@ -35,8 +35,8 @@
     "numencode/wn-fundamentals-plugin": "^2.1",
     "numencode/wn-dropboxadapter-plugin": "^2.0",
     "numencode/wn-widgets-plugin": "^2.0",
-    "numencode/wn-syncops-plugin": "^2.0",
-    "numencode/wn-blogextension-plugin": "^2.0",
+    "numencode/wn-syncops-plugin": "^2.1",
+    "numencode/wn-blogextension-plugin": "^2.2",
     "numencode/wn-bricks-plugin": "^1.0"
   },
   "require-dev": {
