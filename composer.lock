@@ -3407,16 +3407,16 @@
         },
         {
             "name": "numencode/wn-fundamentals-plugin",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/numencode/wn-fundamentals-plugin.git",
-                "reference": "77b46d91058784f08459a236036c08d01c6a5c78"
+                "reference": "0001293e2262673fbccad6fffb66dcccee109a00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/77b46d91058784f08459a236036c08d01c6a5c78",
-                "reference": "77b46d91058784f08459a236036c08d01c6a5c78",
+                "url": "https://api.github.com/repos/numencode/wn-fundamentals-plugin/zipball/0001293e2262673fbccad6fffb66dcccee109a00",
+                "reference": "0001293e2262673fbccad6fffb66dcccee109a00",
                 "shasum": ""
             },
             "require": {
@@ -3426,7 +3426,7 @@
                 "winter/storm": "^1.2"
             },
             "suggest": {
-                "winter/wn-pages-plugin": "Enables the static page settings in the main tabs and, with Winter.Translate, clearing its caches of all locales.",
+                "winter/wn-pages-plugin": "Enables the static page settings in the main tabs, deep links to editor tabs and, with Winter.Translate, clearing its caches of all locales.",
                 "winter/wn-translate-plugin": "Enables translations of fields inside relation repeaters, the language selector in backend forms and clearing the Winter.Pages caches of all locales."
             },
             "type": "winter-plugin",
@@ -3469,7 +3469,7 @@
                 "issues": "https://github.com/numencode/wn-fundamentals-plugin/issues",
                 "source": "https://github.com/numencode/wn-fundamentals-plugin"
             },
-            "time": "2026-11-20T23:33:12+00:00"
+            "time": "2026-11-23T18:22:17+00:00"
         },
         {
             "name": "numencode/wn-syncops-plugin",
